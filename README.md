@@ -1,6 +1,9 @@
 # MySQL-Database-Fiddle
 A MySQL coding playing for educational use.
-There is a [Staff Guide](/MySQL%20Coding%20Playground%20-%20Staff%20Guide.docx) on how to use the system.
+Here is a [Guide](/MySQL%20Coding%20Playground%20-%20Staff%20Guide.docx) on how to use the system.
+
+## Configuaration
+There is a `config.php` file which allows for configuration of the database connection and admin credentials.
 
 ## Deployment Requirements
 - Web Server
@@ -13,5 +16,6 @@ There is a [Staff Guide](/MySQL%20Coding%20Playground%20-%20Staff%20Guide.docx) 
 - [Ace Editor 1.4.1](https://ace.c9.io/)
 - [Ionicons 4.3](https://ionicons.com/)
 
-## Configuaration
-There is a `config.php` file which allows for configuration of the database connection and admin credentials.
+## Contact
+Ben Rose - University of Worcester
+Email: rosb1_17@uni.worc.ac.uk
