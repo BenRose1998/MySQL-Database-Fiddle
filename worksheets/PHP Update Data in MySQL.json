@@ -1,0 +1,1 @@
+[{"name":"title","value":"PHP Update Data in MySQL"},{"name":"subtitle","value":"Update Data In a MySQL Table Using MySQLi and PDO"},{"name":"text","value":"The UPDATE statement is used to update existing records in a table:"},{"name":"code","value":"UPDATE table_name\r\nSET column1=value, column2=value2,...\r\nWHERE some_column=some_value "}]

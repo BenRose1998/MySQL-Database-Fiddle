@@ -1,0 +1,81 @@
+#outputToggle{
+  color: black;
+  text-decoration: none;
+}
+#outputToggle:hover{
+  text-decoration: none;
+}
+h5#outputText {
+    display: inline-block;
+}
+
+ion-icon{
+  font-size: 28px;
+  position: absolute;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+#output{
+  min-height: 200px;
+  background-color: light-gray;
+}
+.editor {
+  position: relative;
+  font-size: 18px;
+  min-height: 400px;
+}
+
+#editors{
+  margin:0px;
+}
+
+#queryButton, #schemaButtons{
+  margin-top:10px;
+}
+
+div.editorContainer{
+  padding:0;
+}
+
+#main{
+  padding-left:30px;
+  padding-right:30px;
+}
+
+
+@media screen and (min-width: 992px) {
+  div.editorContainer:first-child{
+    margin-right:10px;
+  }
+
+  div.editorContainer:last-child{
+    margin-left:10px;
+  }
+}
+
+#loadExample{
+  /* margin-top: 10px; */
+  display: inline-block;
+  /* float: right; */
+}
+
+.logRegForm{
+  margin-top:30px;
+}
+
+#staffLogRegForm{
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width:25%;
+}

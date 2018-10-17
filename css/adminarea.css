@@ -1,0 +1,28 @@
+#main{
+  width:60%;
+  margin-top:30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#worksheetList{
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+#dashboardButtons{
+  width:100%;
+  margin-left: 0;
+}
+
+#dashboardButtons a{
+  margin: 5px;
+}
+
+#dashboardButtons a:first-of-type{
+  margin-left: 0px;
+}
+
+/* #dashboardButtons a:last-of-type{
+  margin-right: 0px;
+} */
