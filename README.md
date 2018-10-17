@@ -1,5 +1,6 @@
 # MySQL-Database-Fiddle
 A MySQL coding playing for educational use.
+There is a [Staff Guide](/MySQL%20Coding%20Playground%20-%20Staff%20Guide.docx) on how to use the system.
 
 ## Deployment Requirements
 - Web Server
