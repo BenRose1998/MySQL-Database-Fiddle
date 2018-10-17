@@ -18,4 +18,5 @@ There is a `config.php` file which allows for configuration of the database conn
 
 ## Contact
 Ben Rose - University of Worcester
+
 Email: rosb1_17@uni.worc.ac.uk
