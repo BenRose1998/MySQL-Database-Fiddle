@@ -65,8 +65,14 @@ function createPDO(){
   return new PDO($dsn, $_SESSION['id'], '', $opt);
 }
 
-function deleteDatabase($pdo){
-  $sql = "DROP DATABASE " . $_SESSION['id'];
+function deleteDatabase(){
+  $dsn = 'mysql:host=' . HOSTNAME;
+  $pdo = new PDO($dsn, USERNAME, PASSWORD);
+
+  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+  $sql = "DROP USER " . $_SESSION['id'] . "@" . HOSTNAME . ";
+          DROP DATABASE " . $_SESSION['id'];
   // $stmt = $pdo->prepare($sql);
   $pdo->exec($sql);
   $conn = null;
