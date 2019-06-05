@@ -39,7 +39,7 @@ function createDatabase(){
   $_SESSION['id'] = generateRandomString();
   $id = $_SESSION['id'];
 
-  $dsn = 'mysql:host=' . HOSTNAME . ':' . PORT;
+  $dsn = 'mysql:host=' . HOSTNAME;
   $pdo = new PDO($dsn, USERNAME, PASSWORD);
 
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -57,7 +57,7 @@ function createDatabase(){
 }
 
 function createPDO(){
-  $dsn = 'mysql:host=' . HOSTNAME . ':' . PORT . ';dbname=' . $_SESSION['id'];
+  $dsn = 'mysql:host=' . HOSTNAME .';dbname=' . $_SESSION['id'];
 
   $opt = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
   PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_NUM,
@@ -67,7 +67,7 @@ function createPDO(){
 }
 
 function deleteDatabase(){
-  $dsn = 'mysql:host=' . HOSTNAME . ':' . PORT;
+  $dsn = 'mysql:host=' . HOSTNAME;
   $pdo = new PDO($dsn, USERNAME, PASSWORD);
 
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
