@@ -39,15 +39,16 @@ function createDatabase(){
   $_SESSION['id'] = generateRandomString();
   $id = $_SESSION['id'];
 
-  $dsn = 'mysql:host=' . HOSTNAME;
+  $dsn = 'mysql:host=' . HOSTNAME . ':' . PORT;
   $pdo = new PDO($dsn, USERNAME, PASSWORD);
 
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $sql = "CREATE USER '".$id."'@".HOSTNAME." IDENTIFIED VIA mysql_native_password USING '';
+  $sql = "CREATE USER '".$id."'@".HOSTNAME.";
   GRANT USAGE ON *.* TO '".$id."'@".HOSTNAME." REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
   CREATE DATABASE IF NOT EXISTS `".$id."`;
   GRANT ALL PRIVILEGES ON `".$id."`.* TO '".$id."'@".HOSTNAME.";";
+
 
   // $stmt = $pdo->prepare($sql);
   $pdo->exec($sql);
@@ -56,7 +57,7 @@ function createDatabase(){
 }
 
 function createPDO(){
-  $dsn = 'mysql:host=' . HOSTNAME . ';dbname=' . $_SESSION['id'];
+  $dsn = 'mysql:host=' . HOSTNAME . ':' . PORT . ';dbname=' . $_SESSION['id'];
 
   $opt = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
   PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_NUM,
@@ -66,7 +67,7 @@ function createPDO(){
 }
 
 function deleteDatabase(){
-  $dsn = 'mysql:host=' . HOSTNAME;
+  $dsn = 'mysql:host=' . HOSTNAME . ':' . PORT;
   $pdo = new PDO($dsn, USERNAME, PASSWORD);
 
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
